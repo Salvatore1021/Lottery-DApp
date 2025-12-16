@@ -1,0 +1,201 @@
+/* src/App.css */
+
+/* GLOBAL SETTINGS */
+body {
+  /* 🎨 LIGHT THEME BACKGROUND (Outside the box) */
+  /* A beautiful soft Blue-to-Lavender gradient */
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 60px; /* Pushes the card down a bit */
+  padding: 20px;
+}
+
+/* CARD DESIGN */
+.lottery-card {
+  background: #ffffff; /* Pure white inside */
+  
+  /* 🖼️ NICE BORDER & SHADOW */
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Subtle border */
+  border-radius: 24px;
+  padding: 35px;
+  
+  /* This shadow lifts the card off the colored background */
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  
+  text-align: center;
+  position: relative; /* Keeps z-index correct */
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-weight: 800;
+}
+
+.sub-text {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.divider {
+  border: 0;
+  border-top: 2px dashed #e0e0e0;
+  margin: 25px 0;
+}
+
+/* WALLET BUBBLE */
+.wallet-info {
+  background: #f1f3f5;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid #dee2e6;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.stat-value-small {
+  font-family: 'Courier New', monospace;
+  color: #495057;
+  font-weight: 600;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #e9ecef !important;
+  color: #adb5bd !important;
+  box-shadow: none;
+}
+
+/* Primary Connect Button: Soft Indigo */
+.btn-connect {
+  background: #6c5ce7;
+  color: white;
+}
+.btn-connect:hover { background: #5649c0; }
+
+/* Buy Button: Fresh Mint Green */
+.btn-buy {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+  color: white;
+}
+
+/* Winner Button: Warm Gold */
+.btn-winner {
+  background: #ffeaa7;
+  color: #d35400;
+  margin-top: 25px;
+}
+.btn-winner:hover { background: #fdcb6e; }
+
+/* Refresh Button */
+.btn-refresh {
+  background: white;
+  color: #636e72;
+  border: 1px solid #dfe6e9;
+  font-size: 13px;
+  width: auto;
+  margin-top: 15px;
+  padding: 8px 16px;
+}
+.btn-refresh:hover {
+  background: #f8f9fa;
+  color: #2d3436;
+}
+
+/* STATS BOXES */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e9ecef;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #8898aa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2d3748;
+}
+
+/* CHARITY BOX */
+.charity-section {
+  background: #e3f9e5; /* Very light green */
+  border: 1px solid #c3e6cb;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 30px;
+}
+
+.charity-address {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  color: #155724;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  word-break: break-all;
+  margin: 10px 0;
+  border: 1px solid #d4edda;
+}
+
+/* FOOTER */
+.footer-info {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #f1f3f5;
+}
+
+.status-text {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6c5ce7;
+}
