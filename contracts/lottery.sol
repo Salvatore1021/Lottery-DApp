@@ -6,10 +6,10 @@ contract SimpleLottery {
     address[] public players;
     address public lastWinner;
 
-    // --- FIX 1: Price is now fixed to exactly 0.01 ETH ---
+    // This is the fixed lottery ticket price
     uint256 public ticketPrice = 0.01 ether; 
     
-    // --- FIX 2: Charity is set automatically (to owner) for simplicity ---
+    // Charity is set to owner(unless mentioned otherwise)
     address payable public charityAddress;
     uint256 public constant CHARITY_PERCENTAGE = 10;
 
@@ -24,7 +24,6 @@ contract SimpleLottery {
     }
 
     function buyTicket() external payable {
-        // FIX 3: Clearer error message
         require(msg.value == ticketPrice, "Send exactly 0.01 ETH to join");
 
         players.push(msg.sender);
@@ -35,7 +34,6 @@ contract SimpleLottery {
         require(msg.sender == owner, "Only owner can pick winner");
         require(players.length > 0, "No players in lottery");
 
-        // Simple Random Logic
         uint256 randomNumber = uint256(
             keccak256(abi.encodePacked(block.timestamp, players, block.prevrandao))
         );
@@ -70,4 +68,5 @@ contract SimpleLottery {
     function getBalance() external view returns (uint256) {
         return address(this).balance;
     }
+
 }
